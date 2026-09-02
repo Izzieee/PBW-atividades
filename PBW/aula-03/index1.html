@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite o nome do aluno: ")
+        let nota = Number(prompt("Digite a nota final: "))
+        let frequencia = Number(prompt("Digite a frequência: ")) 
+
+        if (frequencia < 75) {
+            console.log(`${nome} | Situação: Reprovado por falta `)
+        } else
+
+        if (nota >= 7) {
+            console.log(`${nome} | Situação: Aprovado`)
+        } else if (nota >= 5) {
+            console.log(`${nome} | Situação: Recuperação `)
+        } else {
+            console.log(`${nome} | Situação: Reprovado`)
+        }
+    </script>
+    
+</body>
+</html>

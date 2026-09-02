@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = Number(prompt("Digite o primeiro número: "));
+        let operacao = prompt("Digite a operação desejada");
+        let num2 = Number(prompt("Digite o segundo número: "));
+        
+        
+        switch (operacao) {
+            case "+":
+                console.log(`Resultado: ${num1 + num2}`);
+                break;
+            case "-":
+                console.log(`Resultado: ${num1 - num2}`);
+                break;
+                case "*":
+                    console.log(`Resultado: ${num1 * num2}`);
+                    break;
+                    case "/":
+                if (num2 == 0) {
+                    console.log("Não pode fazer divisão por 0");
+                } else {
+                console.log(`Resultado: ${num1 / num2}`);
+                }
+                break;
+        }
+        
+    </script>
+</body>
+</html> 
