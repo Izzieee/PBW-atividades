@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv 8</title>
+</head>
+<body>
+    <script>
+        let valor = Number(prompt("Valor total da compra:"))
+        let tipo_cliente = prompt("Digite o tipo do cliente (comum, premium,vip):")
+        let pagamento = prompt("Forma de pagamento:")
+        
+        desconto = 0
+
+        switch (tipo_cliente) {
+            case "comum":
+                desconto = 0
+                break;
+            case "premium":
+                desconto = 0.10
+                break;
+            case "vip":
+                desconto = 0.15
+            default:
+                console.log("Opção inválida.")
+        }
+
+        switch (pagamento) {
+            case "dinheiro":
+                desconto += 0.05
+                break;
+            case "pix":
+                desconto += 0.05
+                break;
+            case "cartão":
+                desconto += 0
+            default:
+                console.log("Opção inválida.")
+        }
+
+        if (valor > 500) {
+            desconto += 0.05
+        }
+
+        if (desconto > 0.25) {
+            desconto = 0.25
+        } 
+
+        valor_final = valor - (valor * desconto)
+
+        console.log(`Valor original: R$${valor}`)
+        console.log(`Percentual do desconto: ${(desconto * 100).toFixed(0)}%`)
+        console.log(`Valor final: R$${valor_final}`)
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -6,28 +6,32 @@
     <title>Questão 5</title>
 </head>
 <body>
-    <!--5) Conta de energia com tarifa por faixa
-Crie um programa que receba o consumo de energia em kWh e calcule o valor da conta com base nestas regras:
-
-até 50 kWh → R$ 0,50 por kWh
-de 51 até 100 kWh → R$ 0,75 por kWh
-acima de 100 kWh → R$ 1,20 por kWh
-
-Depois aplique:
-se a conta passar de R$ 100, acrescente 12% de taxa
-se o consumo for menor ou igual a 30 kWh, dê 5% de desconto
-
-Mostre:
-consumo
-valor bruto
-desconto ou taxa
-
-valor final-->
     <script>
-        let consumo = Number(prompt("Digite o consumo de energia (km/h):"))
-
+        let consumo = Number(prompt("Digite o consumo de energia (kw/h):"))
+        tarifa = 0
+        tratativa = 0
         if (consumo <= 50) {
+            tarifa = 0.50
+        } else if (consumo <= 100) {
+            tarifa = 0.75
+        } else {
+            tarifa = 1.20
         }
+
+        let conta = consumo * tarifa
+
+        if (conta > 100) {
+            conta_final = conta + (conta * 0.12)
+            tratativa  = conta * 0.12
+            console.log(`Consumo: R$${consumo}kw/h\nValor bruto: R$${conta} \nAcréscimo de R$: ${tratativa} \nValor final: R$${conta_final.toFixed(2)}`)
+        } else if (consumo <= 30) {
+            conta_final = conta - (conta * 0.05)
+            tratativa = conta * 0.05
+            console.log(`Consumo: R$${consumo}kw/h \nValor bruto: R$ ${conta} \nDesconto de R$: ${tratativa.toFixed(2)} \nValor final: R$${conta_final.toFixed(2)}`)
+        } else {
+            console.log(`Sem desconto ou acréscimo. \nConsumo: ${consumo} \nValor bruto: R$${conta} \nValor final: R$${conta}`)
+        }
+
     </script>
 </body>
 </html>

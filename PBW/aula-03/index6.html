@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv 6</title>
+</head>
+<body>
+    <!--
+    6) Classificação de triângulos
+Peça ao usuário os três lados de um triângulo.
+
+Primeiro, verifique se os valores podem formar um triângulo:
+
+um lado deve ser menor que a soma dos outros dois
+
+Se não formar, mostre:
+Os valores informados não formam um triângulo.
+
+Se formar, classifique como:
+
+equilátero → três lados iguais
+
+isósceles → dois lados iguais
+
+escaleno → três lados diferentes
+
+Depois, acrescente uma segunda classificação:
+
+se houver um ângulo reto não precisa calcular
+
+em vez disso, verifique apenas se o maior lado ao quadrado é igual à soma dos quadrados dos outros dois
+→ nesse caso, diga que ele é também retângulo
+    -->
+    <script>
+        let l1 = Number(prompt("Digite o primeiro lado"));
+        let l2 = Number(prompt("Digite o segundo lado"));
+        let l3 = Number(prompt("Digite o terceiro lado"));
+
+        if ((l1 < l2 + l3) && (l2 < l1 + l3) && (l3 < l1 + l2)) {
+            if ((l1 == l2) && (l1 == l3)) {
+                    console.log("Triângulo Equilátero");
+            } else if ((l1 == l2 && l2 != l3) || (l1 == l3 && l3 != l2) || (l2 == l3 && l3 != l1)) {
+                    console.log("Triângulo Isósceles");
+            } else {
+                console.log("Triângulo Escaleno")
+            }
+        } else {
+            console.log("Os valores informados não formam um triângulo.")
+        }
+    </script>
+    
+</body>
+</html>
