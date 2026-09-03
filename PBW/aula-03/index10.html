@@ -3,11 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>atv 10</title>
 </head>
 <body>
     <script>
-        let item_principal = prompt("")
+        let cod_item = prompt("Código do item principal:");
+        let cod_bebida = prompt("Código da bebida:");
+        let quantidade = Number(prompt("Quantidade:"));
+
+        let item = ''
+        let bebida = ''
+        let valor = 0
+
+        switch (cod_item) {
+            case "1":
+                item = "Hambúrguer"
+                valor += 18 * quantidade
+                break;
+            case "2":
+                item = "Cheeseburger"
+                valor += 20 * quantidade
+                break;
+            case "3":
+                item = "X-Bacon"
+                valor += 24 * quantidade
+                break;
+            case "4":
+                item = "Hot Dog"
+                valor += 15 * quantidade
+                break;
+            default:
+                console.log("Opção inválida.")
+                break;
+            }
+        
+        switch (cod_bebida) {
+            case "1":
+                bebida = "Refrigerante"
+                valor += 6 * quantidade
+                break;
+            case "2":
+                bebida = "Suco"
+                valor += 8 * quantidade
+                break;
+            case "3":
+                bebida = "Água"
+                valor += 4 * quantidade
+            default:
+                console.log("Opção inválida.")
+                break;
+        }
+
+        desc = 0
+        if (quantidade > 3) {
+            desc += 0.10
+        } 
+
+        if (valor > 80) {
+            desc += 0.05
+        }
+
+        valor_desc = valor - (valor * desc)
+
+        console.log(`Item escolhido: ${item}`)
+        console.log(`Bebida escolhida: ${bebida}`)
+        console.log(`Quantidade: ${quantidade}`)
+        console.log(`Valor total: ${valor}R$`)
+        console.log(`Desconto ${(desc * 100).toFixed(0)}%`)
+        console.log(`Valor final: ${valor_desc}R$`)
+
     </script>
     
 </body>
