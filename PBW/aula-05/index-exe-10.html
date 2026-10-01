@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcularMedia(n1, n2) {
+            return (n1 + n2) / 2;
+        }
+        
+        function mostrarResultado(nome,media) {
+            console.log(`Aluno: ${nome} `);
+            console.log(`Média: ${media}`);
+            if (media >= 7.0) {
+                console.log("Situação: Aprovado");
+            } else {
+                console.log("Situação: Reprovado");
+                
+            }
+        }
+        
+        let nome = prompt("Digite o nome do aluno: ");
+        let n1 = Number(prompt("Digite a primeira nota: "));
+        let n2 = Number(prompt("Digite a segunda nota: "));
+
+        let media = calcularMedia(n1,n2);
+        mostrarResultado(nome,media);
+    </script>
+</body>
+</html>
