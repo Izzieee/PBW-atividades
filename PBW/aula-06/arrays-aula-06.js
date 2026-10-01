@@ -53,6 +53,7 @@ let media = soma / notas.length
 
 console.log("Total da soma:", soma);
 console.log("Média total:", media);*/
+
 //9
 /*let lista = [3, 8, 5, 10, 7, 12, 9, 14];
 for (let i = 0; i < lista.length; i++) {
@@ -61,19 +62,16 @@ for (let i = 0; i < lista.length; i++) {
     }
 }*/
 
-let produtos = ["Skol Beats", "Açúcar", "Detergente"]
+//10
+/*let produtos = ["Skol Beats", "Açúcar", "Detergente"]
 produtos.push("Ração", "Leite")
 
 for (let i = 0; i < produtos.length; i++) {
-        console.log(produtos[i]);
+        console.log(i, "-", produtos[i]);
     }
 
-console.log(produtos.);
-
-
-
-
-
+console.log("Quantidade de produtos:", produtos.length);
+console.log(`Primeiro produto: ${produtos[0]} \nÚltimo produto: ${produtos[produtos.length - 1]}`);*/
 
 
 
