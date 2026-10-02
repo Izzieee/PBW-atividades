@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let aluno = {
+            nome: null,
+            idade: null,
+            turma: null,
+            nota: null
+        };
+
+        let nomeobj = prompt("Digite o seu nome:"); 
+        let idadeobj = prompt("Digite a sua idade: ");      
+        let turmaobj = prompt("Digite a sua turma:");
+        let notaobj = prompt("Digite a nota:");
+
+        aluno.nome = nomeobj;
+        aluno.idade = idadeobj;
+        aluno.turma = turmaobj;
+        aluno.nota = notaobj;
+
+        console.log(aluno);
+
+        aluno.situacao = null
+
+        if (aluno.nota >= 7) {
+            aluno.situacao = "Aprovado"
+        } else {
+            aluno.situacao = "Reprovado"
+        }
+
+        console.log(aluno);
+        
+
+
+        
+
+    </script>
+</body>
+</html>
