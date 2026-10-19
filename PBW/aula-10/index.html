@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 10</title>
+    <style>
+      body {
+        font-family: monospace;
+        background-color: #f0f0f0;
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      h1 {
+        color: #e60000;
+        font-size: 32px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #ff7b00;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+        border: 1px solid #ccc;
+      }
+
+      #informacoes {
+        margin-top: 20px;
+        font-size: 28px;
+        color: #e60000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Atividade - Aula 10</h1>
+
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+    <input type="text" id="favorito" placeholder="Digite seu filme favorito" />
+    <input type="text" id="cor" placeholder="Digite sua cor favorita" />
+    <button onclick="exibirInformacoes()">Exibir Informações</button>
+    <p id="informacoes"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
