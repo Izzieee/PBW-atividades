@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo">Atividade - aula 09</h1>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p id="texto2">lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+    
+
+        <button onclick="mudancaPagina()">Clique aqui</button>
+
+        <script>
+            function mudancaPagina() {
+              document.getElementById("texto").style.color = "red";
+              document.getElementById("texto").style.fontSize = "24px";
+              document.getElementById("texto").style.fontFamily = "monospace";
+              document.getElementById("texto").textContent = "E aqueles que foram vistos dançando foram julgados insanos por aqueles que não podiam escutar a música - Friedrich Nietzsche"
+              document.getElementById("titulo").style.fontFamily = "cursive";
+              document.getElementById("titulo").style.color = "green";
+              document.getElementById("texto2").style.color = "blue";
+              document.getElementById("texto2").textContent = "O importante é viver bem, não viver por muito tempo; e muitas vezes vive bem quem não vive muito. - Sêneca"
+              document.getElementById("texto2").style.fontSize = "24px";
+              document.getElementById("texto2").style.fontFamily = "arial";
+              document.body.style.backgroundColor = "black";
+            }
+        </script>
+</body>
+</html>
